@@ -8,3 +8,4 @@ def testa_aprovado(n1,n2):
 testa_aprovado(8.0,7.0)
 testa_aprovado(3.0,8.5)
 testa_aprovado(4.0,5.0)
+testa_aprovado(9.0,7.5)
