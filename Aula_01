@@ -1,0 +1,48 @@
+"Aula 01"
+
+# Em pyhton temos floating point (1.0, 2.0,...) e números (1,2,...)
+
+print(1+1)
+
+# O "%" retorna o resto da divisão
+
+print(8%2)
+
+# As variáveis não podem começar com número ou símbulos. Elas devem começar com letras
+
+num = 23
+nome = "Rafael"
+
+print("Meu nome é {} e minha idade é {}".format(nome,num))
+
+#Lista é um conjunto de elementos num set de brackets, separados por vírgulas
+
+print([1,2,3])
+
+#Exemplo de dicionário:
+
+d= {'key1':'value', 'key2':123}
+
+print(d['key1'])
+
+#Dicionários não retem ordem. São apenas chaves para avaliar algo
+
+#Tuplas
+
+t=(1,2,3)
+print(t[0])
+
+#Tuplas são imutáveis. Não se pode alterar os valores. Já uma lista pode ser alterada
+
+#Para fazer verdadeiro e false deve-se usar "==" e não "="
+
+s = "hello my name is Sam"
+
+print(s.lower())
+
+print(s.upper())
+
+print(s.split())
+
+#O split vai separar o texto onde foi indicado a quebra. Num espaço vazio, ele separa nos espaços. Caso digite um caracter, a quebra ocorrerá nesse
+
