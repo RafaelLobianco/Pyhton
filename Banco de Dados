@@ -27,18 +27,46 @@ class Professor(Base):
         session.delete(professor)
         session.commit()
         
+    
     def get_by_name(name):
-        all_profesors = session.query(Professor).all()
-             
+        all_professors = session.query(Professor).all()
+
         profs = []
         for professor in all_professors:
-            if professor.name ==name:
+            if professor.name == name:
                 profs.append(professor)
-                return profs
+        
+        return profs
 
 #Cria banco de dados
 Base.metadata.create_all(engine)
 
 prof1 = Professor(name='Manoela', password = 'python')
 Professor.add(prof1)
+
+# Busca registro no banco
+
+print(Professor.get_by_name('Manoela'))
+
+query_prof = Professor.get_by_name('Manoela')
+
+print(query_prof[0].name)
+print(query_prof[0].id)
+print(query_prof[0].password)
+
+#Adicionar um professor
+
+Professor.add(Professor(name="Allan",password='puc'))
+
+print(Professor.get_by_name('Allan'))
+
+#Buscar todos os professores
+
+profs = session.query(Professor).all()
+print(profs)
+
+for prof in profs:
+    print(prof.name)
+
+
 
